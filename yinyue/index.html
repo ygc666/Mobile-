@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易云音乐</title>
+    <link rel="stylesheet" href="./css/default.css">
+    <script>
+		(function(){
+			var PixelRaio = 1 / window.devicePixelRatio;
+			var html = document.documentElement;
+			document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale='+PixelRaio+',minimum-scale='+PixelRaio+',maximum-scale='+PixelRaio+'"/>');
+			var hWidth = html.getBoundingClientRect().width;
+			html.style.fontSize = hWidth / 28.8 +'px';
+		})();
+	</script>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+		<div class="menu">
+			<a href="javascript:;"></a>
+		</div>
+		<div class="nav">
+			<a href="javascript:;"></a>
+			<a class="active" href="javascript:;"></a>
+			<a class="active" href="javascript:;"></a>
+		</div>
+		<div class="search">
+			<a href="javascript:;"></a>
+		</div>
+	</header>
+	<section class="nav" id="nav">
+		<ul class="list">
+			<li>
+				<div class="one"></div>
+				<div class="two">
+					本地音乐 <span>(301)</span>
+				</div>
+			</li>
+			<li>
+				<div class="one"></div>
+				<div class="two">
+					最近播放 <span>(1230)</span>
+				</div>
+			</li>
+			<li>
+				<div class="one"></div>
+				<div class="two">
+					下载管理 <span>(1)</span>
+				</div>
+			</li>
+			<li>
+				<div class="one"></div>
+				<div class="two">
+					我的电台 <span>(2)</span>
+				</div>
+			</li>
+			<li>
+				<div class="one"></div>
+				<div class="two">
+					我的收藏 <span>(专辑/歌手/视频/专栏)</span>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<section class="songList">
+		<div class="onOff">
+			<h3>创建的歌单</h3><span>(6)</span>
+		</div>
+		<div class="wrap">
+			<ul class="list">
+				<li>
+					<div class="one">
+						<img src="./image/list2/1.png">
+					</div>
+					<div class="two">
+						<p>我喜欢的音乐</p>
+						<p>164首</p>
+					</div>
+				</li>
+				<li>
+					<div class="one">
+						<img src="./image/list2/1.png">
+					</div>
+					<div class="two">
+						<p>Music</p>
+						<p>64首</p>
+					</div>
+				</li>
+				<li>
+					<div class="one">
+						<img src="./image/list2/1.png">
+					</div>
+					<div class="two">
+						<p>陈粒</p>
+						<p>50首</p>
+					</div>
+				</li>
+				<li>
+					<div class="one">
+						<img src="./image/list2/1.png">
+					</div>
+					<div class="two">
+						<p>21 Savage</p>
+						<p>50首</p>
+					</div>
+				</li>
+				<li>
+					<div class="one">
+						<img src="./image/list2/1.png">
+					</div>
+					<div class="two">
+						<p>Contrast</p>
+						<p>17首</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<footer class="footer" id="footer">
+		<div class="playImgBox">
+			<img src="./image/Japan.png">
+		</div>
+		<div class="SongTitle">
+			<p>我也曾经想过一了百了</p>
+			<p>横滑可以切换上下首哦</p>
+		</div>
+		<div class="playList">
+			<a href="javascript:;"></a>
+			<a href="javascript:;"></a>
+		</div>
+	</footer>
+	<script>
+			(function(){
+				var header = document.querySelector('#header');
+				var nav = document.querySelector('#nav');
+				var footer = document.querySelector('#footer');
+				var songList = document.querySelector('.songList');
+				/*这三个值加起来用页面高度去减就得到了SongList的宽度*/
+				var n = header.offsetHeight + nav.offsetHeight + footer.offsetHeight;
+				//alert(n);
+				//alert(document.documentElement.clientHeight);
+				var h = document.documentElement.clientHeight - n;
+				songList.style.height = h +'px';
+				//console.log(songList)
+			})();
+		</script>
+</body>
+</html>

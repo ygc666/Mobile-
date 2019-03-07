@@ -1,0 +1,269 @@
+@r:50rem;
+h1,h2,h3,h4{
+margin: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+a {
+text-decoration: none;
+}
+ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+img {
+vertical-align: top;
+}
+html,
+body {
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+.header{
+    height: 182/@r;
+    width: 1440/@r;
+    background: #dc4037;
+    display: flex;
+    justify-content: space-between;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    .menu{
+        height: 182/@r;
+        width: 182/@r;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: url(../image/header/menu.png) no-repeat center center;
+            background-size:  98/@r 98/@r;
+        }
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        display: -webkit-box;
+        -webkit-box-pack: justify;
+        a{
+            display: block;
+            height: 100%;
+            &:nth-of-type(1){
+                width: 181/@r;
+                background: url(../image/header/music-off.png) no-repeat center center;
+            }
+            &:nth-of-type(2){
+                width: 176/@r;
+                background: url(../image/header/logo-off.png) no-repeat center center;
+            }
+            &:nth-of-type(3){
+                width: 193/@r;
+                background: url(../image/header/video-off.png) no-repeat center center;
+            }
+            &:nth-of-type(1),&:nth-of-type(2),&:nth-of-type(3){
+                background-size: 78/@r 78/@r;
+            }
+        }
+        .active{
+            opacity: 0.5;
+        }
+        width: 580/@r;
+        height: 100%;
+
+    }
+    .search{
+        width: 168/@r;
+        height: 100%;
+        a{
+            display: block;
+            width: 168/@r;
+            height: 100%;
+            background: url(../image/header/search.png) no-repeat center center;
+            background-size:  98/@r 98/@r;
+        }
+    }
+}
+.nav{
+    .list{
+        li{
+            position: relative;
+            height: 174/@r;
+            font-size: 42/@r;
+            display: flex;
+            display: -webkit-box;
+            .one{
+                width: 175/@r;
+                height: 175/@r;
+            }
+            .two{
+                display: flex;
+                align-items: center;
+                display: -webkit-box;
+                -webkit-box-align:center;
+                width: 100%;
+                height: 100%;
+                border-bottom: 1/@r solid #dadcdd;
+                span{
+                    color: #939495;
+                }
+            }
+            &:nth-of-type(1)>.one{
+                background: url(../image/list/music-on.png) no-repeat center center;
+                background-size: 88/@r 88/@r;
+            }
+            &:nth-of-type(2)>.one{
+                background: url(../image/list/Play-history.png) no-repeat center center;
+                background-size: 88/@r 88/@r;
+            }
+            &:nth-of-type(3)>.one{
+                background: url(../image/list/download.png) no-repeat center center;
+                background-size: 88/@r 88/@r;
+            }
+            &:nth-of-type(4)>.one{
+                background: url(../image/list/radio-station.png) no-repeat center center;
+                background-size: 88/@r 88/@r;
+            }
+            &:nth-of-type(5)>.one{
+                background: url(../image/list/collection.png) no-repeat center center;
+                background-size: 88/@r 88/@r;
+            }
+        }
+    }
+}
+.songList{
+    position: relative;
+    height: auto;
+    /*我现在唯一能解决的是用这个js来算*/
+    .onOff{
+        height: 105/@r;
+        width: 1440/@r;
+        background-color: #e7e9e9;
+        line-height: 105/@r;
+        color: #5c5d5d;
+        h3{
+            position: relative;
+            font-size: 36/@r;
+            font-weight: 400;
+            display: inline;
+            letter-spacing: 2px;
+            padding-left: 117/@r;
+            &::after{
+                position: absolute;
+                content: "";
+                display: block;
+                height: 100%;
+                width: 117/@r;
+                top: 0px;
+                background: url(../image/show.png) no-repeat center center;
+                background-size: 54/@r 54/@r;
+            }
+        }
+        span{
+            font-size: 36/@r;
+        }
+    }
+    .wrap{
+        position: absolute;
+        top: 105/@r;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        .list{
+            li{
+                width: 1440/@r;
+                height: 210/@r;
+                display: flex;
+                display: -webkit-box;
+                background-color: #f2f4f5;
+                .one{
+                    padding: 10/@r 35/@r 10/@r 21/@r;
+                    img{
+                        display: block;
+                        width: 189/@r;
+                        height: 189/@r;
+                        border-radius: 8/@r;
+                    }
+                }
+                .two{
+                    width: calc(1440/@r - 245/@r);
+                    height: calc(210/@r - 1/@r);
+                    border-bottom: 1/@r solid #dadcdd;
+                    p:nth-of-type(1){
+                        margin: 45/@r 0 20/@r 0;
+                        letter-spacing: 2px;
+                        font-size: 40/@r;
+                        color: #303131;
+                    }
+                    p:nth-of-type(2){
+                        color: #797a7b;
+                        font-size: 34/@r;
+                    }
+                }
+                &:last-child .two{
+                    border-bottom: none;
+                }
+            }
+            
+        }
+    }
+}
+.footer{
+    position: relative;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    height: 171/@r;
+    width: 1440/@r;
+    display: flex;
+    align-items: center;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    .playImgBox{
+        padding: 20/@r 21/@r 22/@r 21/@r;
+        img{
+            display: block;
+            width: 129/@r;
+            height: 129/@r;
+            border-radius: 8/@r;
+        }
+    }
+    .SongTitle{
+        p:first-child{
+            font-size: 38/@r;
+            color: #333333;
+            margin-bottom: 10/@r;
+        }
+        p:last-child{
+            font-size: 32/@r;
+            color: #808080;
+        }
+    }
+    .playList{
+        display: flex;
+        display: -webkit-box;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 317/@r;
+        height: 171/@r;
+        a{
+            display: block;
+        }
+        a:first-child{
+            width: 167/@r;
+            height: 171/@r;
+            background: url(../image/play.png) no-repeat center center;
+            background-size: 88/@r 88/@r;
+        }
+        a:last-child{
+            width: 150/@r;
+            height: 171/@r;
+            background: url(../image/pay-list.png) no-repeat center center;
+            background-size: 78/@r 78/@r;
+        }
+    }
+}
+

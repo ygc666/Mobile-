@@ -1,0 +1,262 @@
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.header {
+  height: 3.64rem;
+  width: 28.8rem;
+  background: #dc4037;
+  display: flex;
+  justify-content: space-between;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}
+.header .menu {
+  height: 3.64rem;
+  width: 3.64rem;
+}
+.header .menu a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../image/header/menu.png) no-repeat center center;
+  background-size: 1.96rem 1.96rem;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  width: 11.6rem;
+  height: 100%;
+}
+.header .nav a {
+  display: block;
+  height: 100%;
+}
+.header .nav a:nth-of-type(1) {
+  width: 3.62rem;
+  background: url(../image/header/music-off.png) no-repeat center center;
+}
+.header .nav a:nth-of-type(2) {
+  width: 3.52rem;
+  background: url(../image/header/logo-off.png) no-repeat center center;
+}
+.header .nav a:nth-of-type(3) {
+  width: 3.86rem;
+  background: url(../image/header/video-off.png) no-repeat center center;
+}
+.header .nav a:nth-of-type(1),
+.header .nav a:nth-of-type(2),
+.header .nav a:nth-of-type(3) {
+  background-size: 1.56rem 1.56rem;
+}
+.header .nav .active {
+  opacity: 0.5;
+}
+.header .search {
+  width: 3.36rem;
+  height: 100%;
+}
+.header .search a {
+  display: block;
+  width: 3.36rem;
+  height: 100%;
+  background: url(../image/header/search.png) no-repeat center center;
+  background-size: 1.96rem 1.96rem;
+}
+.nav .list li {
+  position: relative;
+  height: 3.48rem;
+  font-size: 0.84rem;
+  display: flex;
+  display: -webkit-box;
+}
+.nav .list li .one {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.nav .list li .two {
+  display: flex;
+  align-items: center;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  width: 100%;
+  height: 100%;
+  border-bottom: 0.02rem solid #dadcdd;
+}
+.nav .list li .two span {
+  color: #939495;
+}
+.nav .list li:nth-of-type(1) > .one {
+  background: url(../image/list/music-on.png) no-repeat center center;
+  background-size: 1.76rem 1.76rem;
+}
+.nav .list li:nth-of-type(2) > .one {
+  background: url(../image/list/Play-history.png) no-repeat center center;
+  background-size: 1.76rem 1.76rem;
+}
+.nav .list li:nth-of-type(3) > .one {
+  background: url(../image/list/download.png) no-repeat center center;
+  background-size: 1.76rem 1.76rem;
+}
+.nav .list li:nth-of-type(4) > .one {
+  background: url(../image/list/radio-station.png) no-repeat center center;
+  background-size: 1.76rem 1.76rem;
+}
+.nav .list li:nth-of-type(5) > .one {
+  background: url(../image/list/collection.png) no-repeat center center;
+  background-size: 1.76rem 1.76rem;
+}
+.songList {
+  position: relative;
+  height: auto;
+  /*我现在唯一能解决的是用这个js来算*/
+}
+.songList .onOff {
+  height: 2.1rem;
+  width: 28.8rem;
+  background-color: #e7e9e9;
+  line-height: 2.1rem;
+  color: #5c5d5d;
+}
+.songList .onOff h3 {
+  position: relative;
+  font-size: 0.72rem;
+  font-weight: 400;
+  display: inline;
+  letter-spacing: 2px;
+  padding-left: 2.34rem;
+}
+.songList .onOff h3::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 2.34rem;
+  top: 0px;
+  background: url(../image/show.png) no-repeat center center;
+  background-size: 1.08rem 1.08rem;
+}
+.songList .onOff span {
+  font-size: 0.72rem;
+}
+.songList .wrap {
+  position: absolute;
+  top: 2.1rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.songList .wrap .list li {
+  width: 28.8rem;
+  height: 4.2rem;
+  display: flex;
+  display: -webkit-box;
+  background-color: #f2f4f5;
+}
+.songList .wrap .list li .one {
+  padding: 0.2rem 0.7rem 0.2rem 0.42rem;
+}
+.songList .wrap .list li .one img {
+  display: block;
+  width: 3.78rem;
+  height: 3.78rem;
+  border-radius: 0.16rem;
+}
+.songList .wrap .list li .two {
+  width: calc(23.9rem);
+  height: calc(4.18rem);
+  border-bottom: 0.02rem solid #dadcdd;
+}
+.songList .wrap .list li .two p:nth-of-type(1) {
+  margin: 0.9rem 0 0.4rem 0;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: #303131;
+}
+.songList .wrap .list li .two p:nth-of-type(2) {
+  color: #797a7b;
+  font-size: 0.68rem;
+}
+.songList .wrap .list li:last-child .two {
+  border-bottom: none;
+}
+.footer {
+  position: relative;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  height: 3.42rem;
+  width: 28.8rem;
+  display: flex;
+  align-items: center;
+  display: -webkit-box;
+  -webkit-box-align: center;
+}
+.footer .playImgBox {
+  padding: 0.4rem 0.42rem 0.44rem 0.42rem;
+}
+.footer .playImgBox img {
+  display: block;
+  width: 2.58rem;
+  height: 2.58rem;
+  border-radius: 0.16rem;
+}
+.footer .SongTitle p:first-child {
+  font-size: 0.76rem;
+  color: #333333;
+  margin-bottom: 0.2rem;
+}
+.footer .SongTitle p:last-child {
+  font-size: 0.64rem;
+  color: #808080;
+}
+.footer .playList {
+  display: flex;
+  display: -webkit-box;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6.34rem;
+  height: 3.42rem;
+}
+.footer .playList a {
+  display: block;
+}
+.footer .playList a:first-child {
+  width: 3.34rem;
+  height: 3.42rem;
+  background: url(../image/play.png) no-repeat center center;
+  background-size: 1.76rem 1.76rem;
+}
+.footer .playList a:last-child {
+  width: 3rem;
+  height: 3.42rem;
+  background: url(../image/pay-list.png) no-repeat center center;
+  background-size: 1.56rem 1.56rem;
+}
